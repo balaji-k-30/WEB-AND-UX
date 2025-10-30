@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Personal Profile</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.5s;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background-color: #4682b4;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .profile {
+      background: #b2e1f0;
+      padding: 20px;
+      margin: 30px auto;
+      width: 320px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    }
+
+    img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+
+    h1 {
+      color: #333;
+      font-size: 24px;
+    }
+
+    p {
+      color: #555;
+      font-size: 14px;
+    }
+
+    table {
+      margin: 20px auto;
+      border-collapse: collapse;
+      width: 80%;
+      background-color: white;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: center;
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #5c9edc;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    button {
+      background-color: #4682b4;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    button:hover {
+      background-color: #5c9edc;
+    }
+  </style>
+</head>
+<body onload="showPopup()">
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="profile" id="about">
+    <img src="C:\Users\BALAJI K\OneDrive\Pictures\ktm.JPG" alt="My Photo">
+    <h1>BALAJI K</h1>
+    <p><strong>Course:</strong> BCA</p>
+    <p><strong>Email:</strong> BAlaji.k2007@email.com</p>
+    <p><strong>Phone No:</strong> 025120567502</p>
+    <p><strong>Experience:</strong> I am still a student studying</p>
+    <p><strong>Languages:</strong> English, Kannada, Hindi, Telugu</p>
+
+    <table>
+      <tr>
+        <th>SL NO</th>
+        <th>MARKS</th>
+        <th>COLLEGE NAME</th>
+        <th>CGPA</th>
+      </tr>
+      <tr>
+        <td>01</td>
+        <td>410</td>
+        <td>St. NARAYANA SCHOOL</td>
+        <td>68%</td>
+      </tr>
+      <tr>
+        <td>02</td>
+        <td>528</td>
+        <td>DEEKSHA PU College</td>
+        <td>88%</td>
+      </tr>
+    </table>
+
+    <button onclick="changeBackground()">Change Background Color</button>
+  </div>
+
+  <!-- Contact Section -->
+  <div id="contact">
+    <h2>Contact Me</h2>
+    <p>If you'd like to get in touch, feel free to email me at <strong>BAlaji.k2007@email.com</strong>.</p>
+  </div>
+
+  <script>
+    // Show popup when the page is refreshed or loaded
+    function showPopup() {
+      alert("Welcome to my personal profile page!");
+    }
+
+    // Change background color randomly
+    function changeBackground() {
+      const colors = ['#f0f8ff', '#ffe4e1', '#e6e6fa', '#fafad2', '#d1f7c4', '#fff0f5'];
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      document.body.style.backgroundColor = randomColor;
+    }
+  </script>
+</body>
+</html>
